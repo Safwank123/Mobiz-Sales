@@ -120,11 +120,13 @@ class ProductScreen extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text(
-                                      product.name,
-                                      style: AppTypography.style14SemiBold.copyWith(color: AppColors.kAppOnSurface),
-                                      maxLines: 2,
-                                      overflow: TextOverflow.ellipsis,
+                                    Expanded(
+                                      child: Text(
+                                        product.name,
+                                        style: AppTypography.style14SemiBold.copyWith(color: AppColors.kAppOnSurface),
+                                        maxLines: 2,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
                                     ),
                                     Text(
                                       '\$${product.price.toStringAsFixed(2)}',
